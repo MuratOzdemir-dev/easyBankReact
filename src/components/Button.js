@@ -2,10 +2,10 @@ import React from "react";
 
 function Button() {
   return (
-    <div className="button">
+    <button className="button">
       <a href="/">Request Invite</a>
       <span className="button__overlay"></span>
-    </div>
+    </button>
   );
 }
 

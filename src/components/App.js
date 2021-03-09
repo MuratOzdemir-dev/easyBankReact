@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import Feature from "./Feature";
-
+import Article from "./Article";
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Hero />
       <Feature />
+      <Article />
     </div>
   );
 }

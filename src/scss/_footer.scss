@@ -1,0 +1,148 @@
+.footer {
+  background-color: $darkBlue;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  @include breakpoint-up(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 205px auto;
+    grid-template-areas:
+      "logo menu"
+      "cpr cpr";
+    align-items: center;
+    gap: 2rem;
+  }
+  @include breakpoint-up(laptop) {
+    grid-template-columns: 2fr 1fr 1fr 6fr;
+    grid-template-rows: 68px 68px;
+    grid-template-areas:
+      "logo menu1 menu2 cpr"
+      "logo menu1 menu2 cpr";
+    row-gap: 0;
+    padding: 2rem 5rem;
+  }
+  @include breakpoint-up(desktop) {
+    padding: 2rem 10rem;
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(tablet) {
+      grid-area: logo;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    @include breakpoint-up(laptop) {
+      align-items: flex-start;
+      justify-self: flex-start;
+    }
+  }
+
+  .logo {
+
+    @include breakpoint-up(tablet) {
+      grid-area: logo;
+    }
+  }
+  &__social {
+    margin: 2rem 0;
+    @include breakpoint-up(tablet) {
+      margin: 0;
+    }
+    a {
+      & svg path {
+        transition: all 150ms ease-in-out;
+      }
+      &:hover svg path {
+        fill: $limeGreen;
+      }
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  &__menu1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(tablet) {
+      grid-area: menu;
+      align-self: flex-start;
+    }
+    @include breakpoint-up(laptop) {
+      grid-area: menu1;
+      align-self: center;
+      align-items: flex-start;
+      justify-self: flex-start;
+    }
+    a {
+      transition: all 150ms ease-in-out;
+      text-decoration: none;
+      color: $lightGrayishBlue;
+      margin-bottom: 1rem;
+      &:last-child {
+        @include breakpoint-up(laptop) {
+          margin: 0;
+        }
+      }
+      &:hover {
+        color: $limeGreen;
+      }
+    }
+  }
+
+  &__menu2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(tablet) {
+      grid-area: menu;
+      align-self: flex-end;
+    }
+    @include breakpoint-up(laptop) {
+      grid-area: menu2;
+      align-self: center;
+      align-items: flex-start;
+      justify-self: flex-start;
+    }
+    a {
+      transition: all 150ms ease-in-out;
+      text-decoration: none;
+      color: $lightGrayishBlue;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &:hover {
+        color: $limeGreen;
+      }
+    }
+  }
+
+  &__cpr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @include breakpoint-up(tablet) {
+      margin: 0;
+      text-align: center;
+      grid-area: cpr;
+      gap: 1rem;
+    }
+    @include breakpoint-up(laptop) {
+      justify-self: flex-end;
+    }
+
+    p {
+      font-size: 12px;
+      @include breakpoint-up(tablet) {
+        font-size: 14px;
+      }
+    }
+  }
+}

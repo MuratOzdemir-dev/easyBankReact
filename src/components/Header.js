@@ -8,7 +8,7 @@ import Button from "./Button";
 function Header() {
   return (
     <header className="header">
-      <Logo  src= "/images/logo-dark.svg"/>
+      <Logo  src="/images/logo-dark.svg"/>
       <Menu class="header__desktop-menu"/>
       <Menu class="header__mobile-menu"/>
       <Hamburger />

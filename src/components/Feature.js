@@ -6,7 +6,7 @@ import FeatureCard from "./FeatureCard";
 
 export default function Feature() {
   return (
-    <div className="feature">
+    <section className="feature">
       <div className="feature__head">
         <h2>Why choose Easybank?</h2>
         <p>
@@ -40,6 +40,6 @@ export default function Feature() {
             account. Tracking your money has never been easier."
         />
       </div>
-    </div>
+    </section>
   );
 }

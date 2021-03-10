@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Hero() {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero__img"></div>
       <div className="hero__text">
         <h1>Next generation digital banking</h1>
@@ -14,6 +14,6 @@ export default function Hero() {
         </p>
         <Button />
       </div>
-    </div>
+    </section>
   );
 }
